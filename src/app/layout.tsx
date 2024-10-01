@@ -1,19 +1,19 @@
+import Navigation from "@/components/Navigation";
 import { ReactNode } from "react";
+import './globals.css';
+
+export const metadata = {
+  title: '리그 오브 레전드 정보 앱',
+  description: 'Next.js를 이용한 리그 오브 레전드 정보 앱, 개인과제',
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-    
       <body>
-      <header>
-        헤더입니다
-      </header>
-      {children}
+      <Navigation />
+      {children} 
       </body>
     </html>
   );
 }
-
-
-// 글로벌 레이아웃 컴포넌트입니다.
-// 파일에서 글로벌 네비게이션을 설정하고, 공통 레이아웃을 정의합니다.

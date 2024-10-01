@@ -2,7 +2,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>챔피언 로테이션 페이지가 위치합니다.</div>
+    <div className='flex flex-col min-h-screen p-10'>
+    <h3 className='text-blue-500 text-4xl font-bold' > 챔피언 로테이션 </h3>
+    </div>
   )
 }
 

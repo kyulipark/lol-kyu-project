@@ -1,15 +1,3 @@
-import React from 'react'
-
-const route = () => {
-  return (
-    <div>route</div>
-  )
-}
-
-export default route
-
-
-// - **파일 경로**: `app/api/rotation/route.ts`
 // - **HTTP 메서드**: `GET`
 // - **기능**: 현재 무료로 플레이 가능한 챔피언들의 ID를 가져옵니다.
 // - **구현 방법**:
