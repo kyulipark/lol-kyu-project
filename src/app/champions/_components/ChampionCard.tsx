@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
-  champiion: Champion;
+  champion: Champion;
 }
 
 export default function ChampionCard({ champion }: Props) {
