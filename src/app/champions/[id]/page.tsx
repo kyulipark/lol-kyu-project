@@ -22,18 +22,32 @@ export default async function ChampionsDetailPage({
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4"> {champion.name}</h2>
-      <div className="flex">
-        <Image
-          src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`}
-          alt={champion.name}
-          width={500}
-          height={300}
-          className="rounded"
-        />
-        <div className="ml-4">
-          <h3 className="text-xl font-semibold">{champion.title}</h3>
-          <p className="mt-2">{champion.lore}</p>
+      <div className="relative w-full h-screen rounded-lg overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg)`,
+          }}
+        ></div>
+
+        <div className="fixed bottom-0 left-0 w-full z-40 p-4 text-white bg-gradient-to-r from-black to-transparent">
+          <div className="flex items-center">
+            <h2 className="text-blue-500 text-5xl font-bold m-10 mr-2 ">
+              {champion.name}
+            </h2>
+            <h3 className="text-xl mt-6">{champion.title}</h3>
+          </div>
+          <p className="mx-10 text-justify pr-40 ">{champion.lore}</p>
+          <h2 className="text-blue-500 text-2xl font-bold mx-10 mt-4 mb-2">
+            스탯
+          </h2>
+          <p className="pr-40 lex mx-10 mr-80">
+            <strong> 공격력: </strong>
+            {champion.info.attack},<strong> 방어력: </strong>
+            {champion.info.defense},<strong> 마법력: </strong>
+            {champion.info.magic},<strong> 난이도: </strong>
+            {champion.info.difficulty}
+          </p>
         </div>
       </div>
     </div>

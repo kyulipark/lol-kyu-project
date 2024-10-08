@@ -11,22 +11,24 @@ export default async function ItemPage() {
     <div className="flex flex-col min-h-screen p-10">
       <h3 className="text-blue-500 text-3xl font-bold mb-8"> 아이템 목록 </h3>
 
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-5 gap-4">
         {items.map((item: Item) => {
           return (
-            <div className="bg-white p-2 rounded shadow flex flex-col justify-center text-center">
+            <div className="p-8 rounded  items-center border border-gray-300 flex flex-col justify-center text-center">
               <Image
                 src={`https://ddragon.leagueoflegends.com/cdn/14.19.1/img/item/${item.image.full}`}
                 width={80}
                 height={80}
                 alt={item.name}
-                className="rounded"
+                className="rounded-full"
               />
-              <p className="mt-2 text-left text-blue-500 font-bold text-l">
+              <p className="mt-3 text-left text-blue-500 font-bold text-l">
                 {" "}
                 {item.name}{" "}
               </p>
-              <p className="text-left text-gray-500">{item.plaintext}</p>
+              <p className=" text-gray-400 text-justify text-m">
+                {item.plaintext}
+              </p>
             </div>
           );
         })}
