@@ -13,8 +13,8 @@ export default function ChampionCard({ champion }: Props) {
         <Image
           src={`https://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${champion.id}_0.jpg`}
           alt={champion.name}
-          width={120}
-          height={120}
+          width={95}
+          height={95}
           className="rounded"
         />
         <div className=" pl-3">

@@ -17,8 +17,8 @@ export default async function ItemPage() {
             <div className="p-8 rounded  items-center border border-gray-300 flex flex-col justify-center text-center">
               <Image
                 src={`https://ddragon.leagueoflegends.com/cdn/14.19.1/img/item/${item.image.full}`}
-                width={80}
-                height={80}
+                width={60}
+                height={60}
                 alt={item.name}
                 className="rounded-full"
               />
