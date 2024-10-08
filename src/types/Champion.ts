@@ -1,5 +1,3 @@
-// Champion.ts
-
 export interface Champion {
   id: string;
   key: string;

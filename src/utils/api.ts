@@ -1,8 +1,10 @@
+// utils/api.ts
 import { Champion, ChampionDetail } from "@/types/Champion";
 import { Item } from "@/types/Item";
 
 const DATA_DRAGON_URL = "https://ddragon.leagueoflegends.com";
 
+// 버전 정보 가져오기
 export async function fetchVersions(): Promise<string[]> {
   const response = await fetch(`${DATA_DRAGON_URL}/api/versions.json`);
   if (!response.ok) {
@@ -11,10 +13,12 @@ export async function fetchVersions(): Promise<string[]> {
   return response.json();
 }
 
+// 챔피언 리스트 가져오기
 export async function fetchChampionList(): Promise<{
   [key: string]: Champion;
 }> {
-  const versions = fetchVersions();
+  // 버전 정보 비동기 처리
+  const versions = await fetchVersions();
   const latestVersion = versions[0];
 
   const response = await fetch(
@@ -29,8 +33,10 @@ export async function fetchChampionList(): Promise<{
   return data.data;
 }
 
+// 챔피언 상세 정보 가져오기
 export async function fetchChampionDetail(id: string): Promise<ChampionDetail> {
-  const versions = fetchVersions();
+  // 버전 정보 비동기 처리
+  const versions = await fetchVersions();
   const latestVersion = versions[0];
 
   const response = await fetch(
@@ -45,8 +51,10 @@ export async function fetchChampionDetail(id: string): Promise<ChampionDetail> {
   return data.data[id];
 }
 
+// 아이템 리스트 가져오기
 export async function fetchItemList(): Promise<{ [key: string]: Item }> {
-  const versions = fetchVersions();
+  // 버전 정보 비동기 처리
+  const versions = await fetchVersions();
   const latestVersion = versions[0];
 
   const response = await fetch(
