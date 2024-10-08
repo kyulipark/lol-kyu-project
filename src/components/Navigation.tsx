@@ -1,10 +1,10 @@
 // app/components/Navigation.tsx
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Navigation() {
   return (
     <nav>
-      <ul className='flex bg-blue-500 py-4 px-40 justify-between' >
+      <ul className="flex bg-blue-500 py-4 px-40 justify-between">
         <li>
           <Link href="/">홈</Link>
         </li>

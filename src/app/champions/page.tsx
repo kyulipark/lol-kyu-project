@@ -11,7 +11,7 @@ export default async function ChampionsPage() {
 
   return (
     <div className="flex flex-col min-h-screen p-10">
-      <h3 className="text-blue-500 text-4xl font-bold"> 챔피언 목록 </h3>
+      <h3 className="text-blue-500 text-3xl font-bold mb-8"> 챔피언 목록 </h3>
       <div className="grid grid-cols-4 gap-4">
         {champions.map((champion) => {
           return <ChampionCard champion={champion} />;
