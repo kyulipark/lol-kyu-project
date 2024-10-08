@@ -14,6 +14,7 @@ export interface Champion {
 }
 
 export interface ChampionDetail extends Champion {
+  info: any;
   lore: string;
   tags: string[];
   stats: {
