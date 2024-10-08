@@ -1,4 +1,7 @@
+import { ReactNode } from "react";
+
 export interface Item {
+  plaintext: ReactNode;
   name: string;
   description: string;
   image: {
@@ -10,5 +13,5 @@ export interface Item {
     sell: number;
     purchasable: boolean;
   };
-  tag: string[];
+  tags: string[];
 }

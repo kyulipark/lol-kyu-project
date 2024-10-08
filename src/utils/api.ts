@@ -1,4 +1,3 @@
-// utils/api.ts
 import { Champion, ChampionDetail } from "@/types/Champion";
 import { Item } from "@/types/Item";
 

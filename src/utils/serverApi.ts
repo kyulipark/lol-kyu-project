@@ -9,7 +9,7 @@ export async function fetchChampionRotation(): Promise<ChampionRotation> {
   }
 
   const response = await fetch(
-    `${RIOT_API_URL}/lol/platfor/v3/champion-rotations`,
+    `${RIOT_API_URL}/lol/platform/v3/champion-rotations`,
     {
       headers: {
         "X-Riot-Token": RIOT_API_KEY,
